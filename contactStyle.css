@@ -1,0 +1,251 @@
+body{
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    margin: 0px;
+    color: #fff;
+    background-color: black;
+    height: 100vh;
+    --x: calc(var(--posX, 0) * 1px);
+    --y: calc(var(--posY, 0) * 1px);
+    background-image: 
+    linear-gradient(115deg, rgb(211, 255, 215), rgb(0, 0, 0)),
+    radial-gradient(90% 100% at calc(50% + var(--x)) calc(0% + var(--y)), rgb(157, 255, 250), rgb(022 000 045)),
+    radial-gradient(100% 100% at calc(80% + var(--x)) calc(0% + var(--y)), rgb(28, 142, 235), rgb(036 000 000)),
+    radial-gradient(150% 210% at calc(100% + var(--x)) calc(0% + var(--y)), rgb(132, 42, 144), rgb(179, 0, 255)),
+    radial-gradient(100% 100% at calc(100% + var(--x)) calc(30% + var(--y)), rgb(229, 85, 179), rgb(0, 174, 255)),
+    linear-gradient(60deg, rgb(231, 61, 234), rgb(68, 29, 123));
+    background-blend-mode: overlay, overlay, difference, difference, difference, normal;
+    background-attachment: fixed;
+
+}
+
+
+#description, #description2{
+    position: relative;
+    font-family: "Raleway", sans-serif;
+    font-size: 50px;
+    font-weight: 50;
+    margin: 60px;
+    color: whitesmoke;
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-bottom: 120px;
+
+}
+
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 2s;
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+#contactLogo{
+    min-height: 100vh;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fill 0.5s ease forwards 3s;
+}
+
+#contactLogo path:nth-child(1){
+    stroke-dasharray: 520px;
+    stroke-dashoffset: 520px;
+    animation: line-anim 2s ease forwards;
+}
+#contactLogo path:nth-child(2){
+    stroke-dasharray: 520px;
+    stroke-dashoffset: 520px;
+    animation: line-anim 2s ease forwards 0.3s;
+}
+#contactLogo path:nth-child(3){
+    stroke-dasharray: 520px;
+    stroke-dashoffset: 520px;
+    animation: line-anim 2s ease forwards 0.6s;
+    
+}
+#contactLogo path:nth-child(4){
+    stroke-dasharray: 520px;
+    stroke-dashoffset: 520px;
+    animation: line-anim 2s ease forwards 0.9s;
+    
+}
+#contactLogo path:nth-child(5){
+    stroke-dasharray: 520px;
+    stroke-dashoffset: 520px;
+    animation: line-anim 2s ease forwards 1.2s;
+    
+}
+#contactLogo path:nth-child(6){
+    stroke-dasharray: 520px;
+    stroke-dashoffset: 520px;
+    animation: line-anim 2s ease forwards 1.5s;
+    
+}
+#contactLogo path:nth-child(7){
+    stroke-dasharray: 520px;
+    stroke-dashoffset: 520px;
+    animation: line-anim 2s ease forwards 1.8s;
+    
+}
+
+@keyframes line-anim {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fill {
+    from{
+        fill: transparent;
+    }
+    to {
+        fill: white;
+    }
+}
+
+ul{
+    list-style: none;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    max-width: 1024px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.nav{
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_list{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    column-gap: 5.5rem;
+
+}
+
+.nav_link{
+    color: #fff;
+    font-size: 20px;
+}
+
+.nav_link:hover{
+    color: #ff6b6b;
+    transition: 0.5s;
+}
+
+#container{
+    position: absolute;
+    margin: auto;
+    width: 100vw;
+    height: 80pt;
+    top: 0;
+    bottom: 0;
+
+    filter: url(threshold) blur(0.6px);
+}
+
+.contact_left{
+    flex-basis: 35%;
+}
+.contact_right{
+    flex-basis: 60%;
+}
+
+.contact_left p{
+    margin-top: 30px;
+}
+
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: black 0.5s;
+}
+
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f;
+}
+
+.contact_right form{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 600px){
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    .nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+    }
+    .nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    .sub_title{
+        font-size: 40px;
+    }
+    .contact_left, .contact_right{
+        flex-basis: 100%;
+    }
+}
+
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}
